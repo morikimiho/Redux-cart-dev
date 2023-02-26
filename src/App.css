@@ -1,14 +1,9 @@
 /*
-Font 
-*/
-@import url("https://fonts.googleapis.com/css2?family=Noto+Sans+JP:wght@100;300;400;500;700;900&display=swap");
-
-/*
 Variables
 */
 
 :root {
-  --color-primary: #c2773e;
+  --color-primary: #a3e6f9;
   --color-primary-dark: #886f2c;
   --color-primary-light: #6d5016;
   --color-grey-1: #102a42;
@@ -30,8 +25,8 @@ Variables
   box-sizing: border-box;
 }
 body {
-  font-family: "Noto Sans JP", sans-serif;
-  background: var(--color-grey-10);
+  font-family: 'Hiragino Kaku Gothic ProN','ヒラギノ角ゴ ProN W3','Meiryo UI','ＭＳ ゴシック',sans-serif;
+  background: #fff;
   color: var(--color-grey-1);
   line-height: 1.5;
   font-size: 0.875rem;
@@ -67,29 +62,7 @@ h4 {
 p {
   margin-bottom: 1.25rem;
 }
-@media screen and (min-width: 800px) {
-  h1 {
-    font-size: 4rem;
-  }
-  h2 {
-    font-size: 2.5rem;
-  }
-  h3 {
-    font-size: 2rem;
-  }
-  h4 {
-    font-size: 1rem;
-  }
-  body {
-    font-size: 1rem;
-  }
-  h1,
-  h2,
-  h3,
-  h4 {
-    line-height: 1;
-  }
-}
+
 /* more global css */
 
 .btn {
@@ -120,7 +93,7 @@ Navbar
 }
 nav {
   background: var(--color-primary);
-  padding: 1.25rem 2rem;
+  padding: 1rem 2rem;
 }
 .nav-center {
   max-width: var(--fixed-width);
@@ -145,12 +118,12 @@ nav svg {
 }
 .amount-container {
   position: absolute;
-  top: -0.6rem;
-  right: -0.6rem;
-  width: 1.75rem;
-  height: 1.75rem;
+  top:8px;
+  right: -30px;
+  width: 30px;
+  height: 30px;
   border-radius: 50%;
-  background: var(--color-primary-light);
+  background: var(--color-grey-5);
   display: flex;
   align-items: center;
   justify-content: center;
@@ -194,7 +167,7 @@ Cart
   margin-top: 1rem;
 }
 .clear-btn,
-.confirm-btn {
+/* .confirm-btn {
   background: transparent;
   padding: 0.5rem 1rem;
   color: var(--color-red-dark);
@@ -210,7 +183,7 @@ Cart
 .confirm-btn {
   border-color: var(--color-primary);
   color: var(--color-primary);
-}
+} */
 
 /*
 Cart Item

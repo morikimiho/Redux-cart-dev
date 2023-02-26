@@ -6,11 +6,10 @@ import { openModal } from '../features/modal/ModalSlice'
 const CartContainer = () => {
     const dispatch = useDispatch();
     const { amount, cartItems, total } = useSelector((state) => state.cart)
-    if (amount < 1) {
+    if (amount < 0) {
       return (
             <section classname="cart">
                 <header>
-                    <h2>買い物かご</h2>
                     <h4 className='empty-cart'>何も入っていません</h4>
                 </header>
             </section>
@@ -20,7 +19,6 @@ const CartContainer = () => {
     return (
         <section className='cart'>
             <header>
-                <h2>買い物かご</h2>
             </header>
             <div>
                 {cartItems.map((item) => {

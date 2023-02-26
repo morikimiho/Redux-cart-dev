@@ -1,16 +1,22 @@
-import { createSlice } from "@reduxjs/toolkit";
-import cartItems from "../../cartItems";
+import { createSlice, createAsyncThunk } from "@reduxjs/toolkit";
+import cartItems from "../../db.json";
 
-//買い物かごの初期化
-const initialState = {
-    cartItems: cartItems,
-    amount: 4,
-    total: 0,
-}
+// export const getItems = createAsyncThunk('cartItems/getItems', async() => {
+//     return await fetch('http://localhost:8000/cartItems')
+//     .then((res) => res.json())
+//     .catch((error) => console.log(error))
+// })
+
+
 
 const cartSlice = createSlice({
     name: "cart",
-    initialState,
+    //買い物かごの初期化
+    initialState: {
+        cartItems: cartItems.cartItems,
+        amount: 3,
+        total: 0
+    },
     reducers: {
         clearCart: (state) => {
             return { cartItems: [], amount: 0, total: 0 };
@@ -38,6 +44,13 @@ const cartSlice = createSlice({
             state.total = total;
         }
     },
+    // extraReducers: {
+    //     [getItems.fulfilled]: (state, action) => {
+    //       state.loading = false;
+    //       state.cartItems = action.payload;
+    //     },
+
+    //   },
 })
 
 console.log(cartSlice);
