@@ -19,7 +19,10 @@ const CartContainer = () => {
     return (
         <section className='cart'>
             <header>
+                <hr />
             </header>
+            <br />
+            <br />
             <div>
                 {cartItems.map((item) => {
                     return <CartItem key={item.id} {...item}/>
@@ -32,7 +35,10 @@ const CartContainer = () => {
                         合計 <span>{total}円</span>
                     </h4>
                 </div>
-                <button className='btn clear-btn' onClick={() => dispatch(openModal())}>全削除</button>
+                <div className='btn-group'>
+                    <button className='btn all-clear' onClick={() => dispatch(openModal())}>全削除</button>
+                    <a href="/confirm"><button className='btn'>購入に進む →</button></a> 
+                </div>
             </footer>
         </section>
     )
