@@ -14,7 +14,7 @@ const Modal = () => {
             dispatch(clearCart());
             dispatch(closeModal());
             }}>OK</button>
-          <button className='btn clear-btn' onClick={()=> dispatch(closeModal())}>やめとく</button>
+          <button className='btn clear-btn' onClick={()=> dispatch(closeModal())}>取り消し</button>
         </div>
       </div>
     </aside>
