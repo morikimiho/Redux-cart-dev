@@ -1,5 +1,5 @@
-import { useEffect } from 'react';
-import { useSelector, useDispatch } from 'react-redux';
+import { createContext, useEffect } from 'react';
+import { useSelector, useDispatch, Provider } from 'react-redux';
 import './App.css';
 import CartContainer from './components/CartContainer';
 import Nav from './components/nav';
@@ -11,7 +11,9 @@ import {
   Route,
   } from "react-router-dom";
 import Confirm from './confirm';
+import { store } from './store';
 
+  
 function App() {
   const dispatch = useDispatch();
   const { cartItems } = useSelector((state) => state.cart);
@@ -21,6 +23,7 @@ function App() {
     dispatch(calculateTotals())
   }, [cartItems]);
   console.log(cartItems);
+
 
   return (
     <Router>
