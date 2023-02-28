@@ -1,5 +1,5 @@
 {
-  "cartItems":[
+  "cartItems": [
     {
       "id": 1,
       "title": "ハート型アイシングクッキー10枚セット",
@@ -9,18 +9,20 @@
     },
     {
       "id": 2,
-      "title": "クマ型アイシングクッキー（ギフト用）",
-      "price": "2000",
-      "img": "/images/cookie_kuma.jpeg",
-      "amount": 0
-    },
-    {
-      "id": 3,
       "title": "季節限定アイシングクッキー10枚セット",
       "price": "1500",
       "img": "/images/cookie_season.jpg",
       "amount": 0
+    },
+    {
+      "id": 3,
+      "title": "クマ型アイシングクッキー（ギフト用）",
+      "price": "2000",
+      "img": "/images/cookie_kuma.jpeg",
+      "amount": 0
     }
+  ],
+  "order": [
 
   ]
 }
