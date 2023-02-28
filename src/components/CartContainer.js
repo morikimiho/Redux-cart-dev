@@ -2,6 +2,7 @@ import React from 'react'
 import { useSelector, useDispatch } from 'react-redux'
 import CartItem from './CartItem' 
 import { openModal } from '../features/modal/ModalSlice'
+import { Link } from 'react-router-dom'
 
 const CartContainer = () => {
     const dispatch = useDispatch();
@@ -37,7 +38,7 @@ const CartContainer = () => {
                 </div>
                 <div className='btn-group'>
                     <button className='btn all-clear' onClick={() => dispatch(openModal())}>全削除</button>
-                    <a href="/confirm"><button className='btn'>購入に進む →</button></a> 
+                    <Link to="/confirm"><button className='btn'>購入に進む →</button></Link>
                 </div>
             </footer>
         </section>

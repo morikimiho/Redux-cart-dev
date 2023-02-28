@@ -14,7 +14,7 @@ const cartSlice = createSlice({
     //買い物かごの初期化
     initialState: {
         cartItems: cartItems.cartItems,
-        amount: 3,
+        amount: 0,
         total: 0
     },
     reducers: {
@@ -53,7 +53,7 @@ const cartSlice = createSlice({
     //   },
 })
 
-console.log(cartSlice);
+// console.log(cartSlice);
 
 export const { clearCart, removeItem, increase, decrease, calculateTotals } = cartSlice.actions;
 export default cartSlice.reducer;

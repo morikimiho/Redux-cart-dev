@@ -3,7 +3,7 @@ import { useSelector } from 'react-redux'
 import { BagIcon } from '../HeroIcons'
 
 const Nav = ({title}) => {
-  const { amount } = useSelector((store) => store.cart)
+  let { amount } = useSelector((store) => store.cart)
 
   return (
     <nav>
